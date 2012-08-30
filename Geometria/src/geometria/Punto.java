@@ -18,7 +18,7 @@ public Punto() {
     this.y=0;
 }
 
-public Punto(double x, double y) {
+public Punto(double x, double y) {  //p1, es decir el punto 1 ingresa por aca
         this.x=x;
         this.y=y;
 }
@@ -41,7 +41,7 @@ public Punto(double x, double y) {
 public boolean equals(Punto p) {
     return((x==p.getX())&&(y==p.getY()));
 }
-public double calcularDistancia(Punto p2){
+public double calcularDistancia(Punto p2){  //ingresa el punto 2
     
    return Math.sqrt(Math.pow((p2.getX()-x),2) + Math.pow((p2.getY()-y),2));
 }
