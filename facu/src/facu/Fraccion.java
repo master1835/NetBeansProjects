@@ -33,6 +33,7 @@ public String toString() {return numerador+"/"+denominador;}
 public void simplificar() {
     int mcd=new Funciones().calcularMcd(numerador, denominador);
     numerador=numerador/mcd;
+    denominador=denominador/mcd;
 }
     
 /*public Fraccion multiplicar (Fraccion f1, Fraccion f2) {

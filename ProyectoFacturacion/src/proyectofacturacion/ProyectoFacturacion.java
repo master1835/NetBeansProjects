@@ -53,6 +53,6 @@ public class ProyectoFacturacion {
         System.out.println("fecha corta: " + Funciones.traerFechaCorta(calen));
         System.out.println("la fecha de la factura es: " + f.traerFechaDeLaFactura());
         System.out.println("la fecha de vencimiento de la factura es: " + f.traerFechaDeVencimiento());
-        
+        System.out.println(fu.traerPrimerDiaHabilFechaCorta(calen));
     }
 }

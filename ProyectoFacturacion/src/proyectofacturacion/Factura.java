@@ -73,9 +73,9 @@ public class Factura {
         return(numero+" "+cliente+" "+monto);
         
     }
-    GregorianCalendar al = new GregorianCalendar();
+     
     public String traerFechaDeLaFactura(){
-        GregorianCalendar c=new GregorianCalendar(anio, mes, al.get(Calendar.DATE));
+        GregorianCalendar c=new GregorianCalendar(anio, mes, new GregorianCalendar().get(Calendar.DATE));
         
         String f = "";
         if(c.get(Calendar.DATE)==10){
@@ -90,7 +90,7 @@ public class Factura {
     }
     
     public String traerFechaDeVencimiento(){
-        GregorianCalendar c=new GregorianCalendar(anio, mes, al.get(Calendar.DATE));
+        GregorianCalendar c=new GregorianCalendar(anio, mes, new GregorianCalendar().get(Calendar.DATE));
         String f = "";
         if(c.DATE==20){
            c=Funciones.traerPrimerDiaHabil(c);

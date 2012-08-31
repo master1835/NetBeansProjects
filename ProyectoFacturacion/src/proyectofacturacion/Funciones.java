@@ -29,33 +29,26 @@ public class Funciones {
     }
     
     public static GregorianCalendar traerPrimerDiaHabil(GregorianCalendar f){
-        boolean r = false;
-        int dia=f.get(Calendar.DATE); 
-        
-        while (r==false){
-        if ((dia>1)||(dia<7)){
-            
-            break;
-        }
-        dia=dia+1;
-        }
-        f.set(f.get(Calendar.YEAR), f.get(Calendar.MONTH), dia);
-        return f;
+    int dia = f.get(Calendar.DAY_OF_WEEK);
+
+        while ((dia==1)||(dia==7))
+        {
+            dia++;
+        } 
+
+    return new GregorianCalendar(f.get(Calendar.YEAR), f.get(Calendar.MONTH), dia);
     }
     
     public String traerPrimerDiaHabilFechaCorta(GregorianCalendar f){
-        boolean r = true;
+       
         int dia=f.get(Calendar.DATE);
         
-        while (r==true){
-        if ((dia>1)||(dia<7)){
+        while ((dia==1)||(dia==7)) {
             
-            break;
+             dia++;
         }
-        dia=dia+1;
-        }
-        f.set(f.get(Calendar.YEAR), f.get(Calendar.MONTH), dia);
-        return (dia+"/"+f.MONTH+"/"+f.YEAR);
+        
+        return traerFechaCorta(new GregorianCalendar(f.get(Calendar.YEAR), f.get(Calendar.MONTH), dia));
     }
     
 }

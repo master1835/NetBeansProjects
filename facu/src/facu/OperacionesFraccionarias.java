@@ -56,6 +56,7 @@ public Fraccion dividir (Fraccion f2) {
         int divDenominador=f1.getDenominador()*f2.getNumerador();*///metod más largo y en el paréntesis de abajo iría (divNumerador, div Denominador)
         
         Fraccion d=new Fraccion(f1.getNumerador()*f2.getDenominador(), f1.getDenominador()*f2.getNumerador());
+        d.simplificar();
         return d;
 }
 public boolean esMayor (Fraccion f2) {
