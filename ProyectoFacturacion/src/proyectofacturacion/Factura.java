@@ -64,8 +64,8 @@ public class Factura {
     }
 
     public void setNumero() {
-        this.numero = idSiguienteFactura;
-        idSiguienteFactura++;
+        this.numero = idSiguienteFactura;   
+        idSiguienteFactura++;       //funciona como una primary key
     }
     
     public String traerFactura(){
@@ -78,7 +78,7 @@ public class Factura {
         GregorianCalendar c=new GregorianCalendar(anio, mes, new GregorianCalendar().get(Calendar.DATE));
         
         String f = "";
-        if(c.get(Calendar.DATE)==10){
+        if(c.get(Calendar.DATE)==10){   //dia 10 xq lo dice la consigna
             
            c=Funciones.traerPrimerDiaHabil(c);
             
@@ -92,7 +92,7 @@ public class Factura {
     public String traerFechaDeVencimiento(){
         GregorianCalendar c=new GregorianCalendar(anio, mes, new GregorianCalendar().get(Calendar.DATE));
         String f = "";
-        if(c.DATE==20){
+        if(c.DATE==20){    //dia 20 xq lo dice la consigna
            c=Funciones.traerPrimerDiaHabil(c);
             
             f = ("la fecha de la factura es: "+Funciones.traerFechaCorta(c));
