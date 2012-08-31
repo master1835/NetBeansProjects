@@ -71,26 +71,25 @@ public String calcularEdad(){
      int diaHoy=new GregorianCalendar().get(Calendar.DATE);
      
       int anio = anioHoy-anioNac;
+      mes = mesHoy-mesNac;
+      dia = diaHoy-diaNac;
     
-    if (mesHoy<mesNac){
-       mes = (mesHoy-mesNac);  //porque todavia no cumplió los años
-       anio--;  //año -1
+    if (mes<0){      //porque todavia no cumplió los años
         
-       dia = diaHoy-diaNac;           
+           anio--;  //año -1
+                   
         
     } else
-        if((mesHoy==mesNac)&&(diaNac<diaHoy)){
+        if((mesHoy==mesNac)&&(dia<0)){
             anio--;
-        }else{
-        mes = mesHoy-mesNac;  //ya cumplió los años
-        dia = diaHoy-diaNac;
-    }
-   
+        }
+         //ya cumplió los años
+         
      if (mes<0){
          mes=mes+12;
      }
      if (dia<0){
-         dia=dia+30;
+         dia=dia+ new GregorianCalendar().getActualMaximum(Calendar.DAY_OF_MONTH);
      }
     
      
