@@ -35,10 +35,10 @@ public class TestGregorianCalendar {
         
         
         if((nro_ano%4==0)||((nro_ano%100==0)&&(nro_ano%400!=0))){
-            boolean esBisiesto=true;
+           
             System.out.println("el año es bisiesto");
 }else{
-            boolean esBisiesto=false;
+            
             System.out.println("el año NO es bisiesto");
 
         }
@@ -49,7 +49,10 @@ public class TestGregorianCalendar {
         System.out.println("¿dia? "); int d=in.nextInt();
         
         
-        GregorianCalendar fecha1=new GregorianCalendar(a, (m-1),d);
+        GregorianCalendar fecha1=new GregorianCalendar(a, (m-1),d);  /* m-1 xq el mes que ingresa
+         * en GregorianCalendar empieza desde 0...si el usuarios pone agosto seria 8, pero en 
+         * gregorian calendar es 7
+         */
         nro_dia_sem=fecha1.get(Calendar.DAY_OF_WEEK);
         System.out.println("numero de la semana: "+nro_dia_sem); 
         dia=fecha1.get(Calendar.DAY_OF_MONTH);
