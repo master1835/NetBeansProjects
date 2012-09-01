@@ -82,13 +82,12 @@ public String calcularEdad(){
     } else
         if((mesHoy==mesNac)&&(dia<0)){
             anio--;
-        }
-         //ya cumplió los años
+        }      //ya cumplió los años
          
-     if (mes<0){
+     if (mes<0){    // al no cumplir los anios el resultado es negativo
          mes=mes+12;
      }
-     if (dia<0){
+     if (dia<0){    // al no cumplir los anios el resultado es negativo
          dia=dia+ new GregorianCalendar().getActualMaximum(Calendar.DAY_OF_MONTH);
      }
     
