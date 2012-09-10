@@ -16,8 +16,8 @@ public class Facu {
     public static void main(String[] args) {
     Funciones func=new Funciones();
     
-        System.out.println("mcd "+func.calcularMcd(8,2));
-        Fraccion f1=new Fraccion(2,3);   //creo objeto o instancia que es lo mismo 
+     System.out.println("mcd "+func.calcularMcd(8,2));
+     Fraccion f1=new Fraccion(2,3);   //creo objeto o instancia que es lo mismo 
      Fraccion f2=new Fraccion(5,2);
      Fraccion f3=new Fraccion(4,6);
      OperacionesFraccionarias j=new OperacionesFraccionarias(new Fraccion(2,3));
@@ -33,7 +33,7 @@ public class Facu {
      System.out.println("resultado de la division: " + j.dividir(f2));  //mas eficiente
      
      Fraccion prod = j.multiplicar(f2);
-     System.out.println("resultado multiplicacion: " + prod.getNumerador() + "/" + prod.getDenominador());
+     System.out.println("resultado multiplicacion: " + prod);
     
     
      System.out.println("pasado a decimal: " + j.aReal());

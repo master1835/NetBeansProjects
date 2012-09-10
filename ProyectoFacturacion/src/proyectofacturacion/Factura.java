@@ -65,11 +65,11 @@ public class Factura {
 
     public void setNumero() {
         this.numero = idSiguienteFactura;   
-        idSiguienteFactura++;       //funciona como una primary key
+        idSiguienteFactura++;       //funciona como una primary key que va incrementando
     }
     
     public String traerFactura(){
-        setNumero();
+        setNumero();    //la 1 vez numero = '1'
         return(numero+" "+cliente+" "+monto);
         
     }
