@@ -137,7 +137,7 @@ public class ArregloEnteros {
         int [] div = new int [arreglo.length];
         try{
             for(int i=0; i<arreglo.length; i++){
-                if(arreglo[i]==0){
+                if(arreglo1[i]==0){
                     div[i]=000;
                 }else{
                     div[i]=arreglo[i]/arreglo1[i];
