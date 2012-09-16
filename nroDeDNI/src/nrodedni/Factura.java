@@ -77,22 +77,22 @@ public class Factura {
         int dia=10;
         GregorianCalendar c=new GregorianCalendar(anio, mes, dia);
         
-        while((c.get(Calendar.DAY_OF_WEEK)==1)||(c.get(Calendar.DAY_OF_WEEK)==7)){
+        /*while((c.get(Calendar.DAY_OF_WEEK)==1)||(c.get(Calendar.DAY_OF_WEEK)==7)){
             
             dia++;
             c.set(anio, mes, dia);
-        }
-        return dia+"/"+mes+"/"+anio;
+        }*/
+        return Funciones.traerDiaHabil(c);//dia+"/"+mes+"/"+anio;
     }
     public String traerFechaDeVencimiento(){
         int dia=20;
         GregorianCalendar ca=new GregorianCalendar(anio, mes, dia);
         
-        while((ca.get(Calendar.DAY_OF_WEEK)==1)||(ca.get(Calendar.DAY_OF_WEEK)==7)){
+       /* while((ca.get(Calendar.DAY_OF_WEEK)==1)||(ca.get(Calendar.DAY_OF_WEEK)==7)){
             dia++;
             ca.set(anio, mes, dia);
-        }
-        return dia+"/"+mes+"/"+anio;
+        }*/
+        return  Funciones.traerDiaHabil(ca);        //dia+"/"+mes+"/"+anio;
     }
     
     public double calcularTotalSinImpuestos(){
